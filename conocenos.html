@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
+
+    <link rel="icon" href="images/andabamba1.png" type="image/x-icon" />
+    <title>Andabamba | Quienes Somos</title>
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="css/mob_menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/rev/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" type="text/css" href="css/rev/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/rev/settings.css" />
+    <link rel="stylesheet" type="text/css" href="css/rev/layers.css" />
+    <link rel="stylesheet" type="text/css" href="css/rev/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/cabecera.css" />
+
+
+    <link
+        href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600'
+        rel='stylesheet' type='text/css' />
+        <style>
+                /* Contenedor de pestañas */
+                .tab {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+        
+                /* Botones de pestañas */
+                .tab button {
+                    flex: 1 1 100%;
+                    text-align: center;
+                    padding: 10px;
+                    background-color: #f1f1f1;
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+        
+                /* Estilos activos para las pestañas */
+                .tab button.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+        
+                /* Contenido de las pestañas */
+                .tabcontent {
+                    display: none;
+                    padding: 20px;
+                    border-top: none;
+                    text-align: justify;
+                }
+        
+                /* Mostrar contenido activo */
+                .tabcontent.active {
+                    display: block;
+                }
+        
+                /* Estilos responsive para dispositivos móviles */
+                @media (max-width: 768px) {
+                    .tab button {
+                        flex: 1 1 90%;
+                        font-size: 14px;
+                    }
+        
+                    .tabcontent {
+                        padding: 10px;
+                    }
+                }
+        
+                /* Ajustar los títulos e íconos */
+                .title-with-icon {
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                }
+        
+                .title-with-icon .icon {
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            </style>
+    <style>
+        .authorities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .authority-item {
+            text-align: center;
+        }
+
+        .authority-item img {
+            width: 250px;
+            /* Ancho fijo */
+            height: 250px;
+            /* Alto fijo */
+            object-fit: cover;
+            /* Asegura que la imagen se recorte para encajar en el contenedor */
+            border-radius: 8px;
+            /* Bordes redondeados para mejor estética */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+        }
+
+
+
+        .authority-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            /* Color del texto de los cargos */
+        }
+
+        .authority-item b {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .title-with-icon {
+            margin-right: 45px;
+            font-family: 'Arial', sans-serif;
+            /* O una fuente sans-serif similar */
+            font-size: 28px;
+            /* Tamaño adecuado para tu diseño */
+            font-weight: bold;
+            color: #1A4E8A;
+            /* Azul fuerte */
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+        }
+
+        .icon {
+            color: #F68B1F;
+            /* Naranja fuerte */
+            margin-right: 15px;
+            /* Espacio pequeño entre el ícono y el texto */
+            font-size: 28px;
+            /* Ajusta el tamaño para que coincida con el texto */
+        }
+
+
+        /* */
+        .hero-section {
+            background: linear-gradient(to right, rgba(185, 185, 190, 0.9), rgba(4, 105, 105, 0.9)), url('images/vision.png') no-repeat center center;
+            background-size: cover;
+            color: rgb(224, 214, 214);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .faq-container {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        /* Estructura del contenedor principal */
+        .tab-container2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Estilo de las pestañas en la barra lateral */
+        .tab {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+            min-width: 200px;
+        }
+
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 14px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tab button.active {
+            background-color: #5a4f9b;
+            color: white;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilo del contenido de las pestañas */
+        .tabcontent {
+            flex: 3;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+        }
+
+        /* Sub-pestañas */
+        .sub-tab-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .sub-tab button {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sub-tab button.active {
+            background-color: #5a4f9b;
+            color: white;
+        }
+
+        .sub-tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Estilo del contenido de las sub-pestañas */
+        .sub-tabcontent {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .sub-tabcontent.active {
+            display: block;
+        }
+
+        /* Ajustes generales */
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+<style>
+ 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .tab-container2 {
+        flex-direction: column;
+    }
+
+    .tab {
+        order: 1;
+        width: 100%;
+    }
+
+    .tabcontent {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+
+    .log img {
+        margin-top:0px;
+        width: 180px; /* Reduce el tamaño del logo en móviles */
+    }
+
+    .contact-item {
+        font-size: 1px; /* Reduce ligeramente el tamaño del texto */
+    }
+
+
+}
+</style>
+
+</head>
+
+<body id="home" class="cms_blog  cms_index4">
+    <div class="header_top">
+        <div class="container">
+            <div class="top_info">
+            
+                <span class="cont_no">
+                    <i class="fa fa-phone"></i> 
+                    <a href="https://wa.me/51920857079" target="_blank">LLÁMANOS : +51 920 857 079</a>
+                </span>
+                <i class="fa fa-envelope"></i> 
+                    <a href="mailto:iestandabamba@gmail.com">iestandabamba@gmail.com</a>
+            </div>
+            <ul class="top_menu">
+                <li class="special">Lunes - Viernes &nbsp;&nbsp;(8am - 1pm) &nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+    <header class="header1">
+        <div class="container0">
+            <div class="logo">
+                <img src="images/logoandabamba.png" alt="Logo IESTP ANDABAMBA">
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa fa-phone"></i> <!-- Aquí puedes usar un ícono de Font Awesome si tienes configurado -->
+                    <span>LLÁMANOS<br>+ 51 920 857 079</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-clock"></i> <!-- Aquí puedes usar un ícono de Font Awesome si tienes configurado -->
+                    <span>HORARIO ATENCIÓN<br>Lunes a Viernes 8am - 1pm</span>
+                </div>
+            </div>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+    .header1 {
+        display: none; /* Oculta la información de contacto en móviles */
+    }
+}
+        </style>
+    </header>
+    <header>
+
+        <nav>
+            <div class="container">
+                <div id="navbar" class="navbar navbar-default">
+
+                    <div class="col-md-9 col-sm-7 col-xs-7 pull-xs-right">
+
+                        <div id="dl-menu" class="dl-menuwrapper">
+                            <button class="dl-trigger visible-sm visible-xs"><i class="fa fa-bars"></i></button>
+                            <ul class="dl-menu">
+                                <li>
+
+                                </li>
+                                <li>
+                                    <a href="index.html">Inicio</a>
+
+                                </li>
+                                <li>
+                                    <a href="#">Nosotros</a>
+                                    <ul class="dl-submenu">
+                                        <li><a href="conocenos.html">Quienes somos</a></li>
+                                        <li><a href="organizacion-institucional.html">Organizacion institucional</a></li>
+                                        <li><a href="plana-jerarquica.html">Plana Jerárgica</a></li>
+                                        <li><a href="docentes.html">Personal Docente</a></li>
+                                        <li><a href="local.html">Local</a></li>
+                                </li>
+                            </ul>
+                            </li>
+                            <li>
+                                <a href="#"> Programas de estudio</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="arquitectura.html">ARQUITECTURA</a></li>
+
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"> Admision</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="admision.html">Admision 2024</a></li>
+                                    <li><a href="#">Becas y Creditos</a></li>
+                                    <li><a href="matricula.html">Matriculas</a></li>
+                                    <li><a href="#">Calendarización</a></li>
+
+                                </ul>
+
+
+                            </li>
+
+
+
+                            <li>
+                                <a href="#"> Transparencia</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="documento-de-gestion.html">Documento de Gestion</a></li>
+                                    <li><a href="estadistica.html">Estadistica</a></li>
+                                    <li><a href="inversiones.html">Inversiones</a></li>
+                                    <li><a href="reclamaciones.html">Libro De Reclamaciones</a></li>
+                                    <li><a href="licenciamiento.html">Licenciamiento</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"> Tramite</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="tupa.html">Tupa</a></li>
+                                    <li><a href="#">Tramite Docuementario</a></li>
+                                   
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"> Servicios</a>
+                                <ul class="dl-submenu">
+                                    <li><a
+                                            href="https://elibro.net/es/lc/andabamba/login_usuario/?next=/es/lc/andabamba/inicio/">Biblioteca
+                                            Virtual</a></li>
+                                    <li><a href="https://institutoandabamba.site/login/index.php" targ>Campus
+                                            Virtual</a></li>
+                                    <li><a href="#">Bolsa Laboral</a></li>
+
+                                </ul>
+
+
+                            </li>
+
+                            <li>
+                                <a href="#"> otros</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Link instirucionales</a></li>
+                                    <li><a href="contacto.html">Contacto</a></li>
+                                </ul>
+                            </li>
+
+
+                        </div>
+                        <!--FIN DEL MENU EMERGENTE-->
+
+
+
+                        <!--Menu de la parte superior -->
+
+                        <div class="main_menu_wrap">
+                            <ul class="main_menu">
+                                <li><a class="trigger" href="index.html">inicio <i class=""></i></a>
+                                </li>
+                                <li><a class="trigger" href="#">NOSOTROS <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="conocenos.html">Quienes somos</a></li>
+                                        <li><a href="organizacion-institucional.html">Organizacion institucional</a></li>
+                                        <li><a href="plana-jerarquica.html">Plana Jerárgica</a></li>
+                                        <li><a href="docentes.html">Personal Docente</a></li>
+                                        <li><a href="local.html">Local</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">PROGRAMA DE ESTUDIO <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="arquitectura.html">ARQUITECTURA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Admision <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="admision.html">Admision 2024</a></li>
+                                        <li><a href="#">Becas y Creditos</a></li>
+                                        <li><a href="matricula.html">Matriculas</a></li>
+                                        <li><a href="#">Calendarización</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">TRASNSPARENCIA <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="documento-de-gestion.html">Documento de Gestion</a></li>
+                                        <li><a href="estadistica.html">Estadistica</a></li>
+                                        <li><a href="inversiones.html">Inversiones</a></li>
+                                        <li><a href="reclamaciones.html">Libro De Reclamaciones</a></li>
+                                        <li><a href="licenciamiento.html">Licenciamiento</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Tramite <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="tupa.html">Tupa</a></li>
+                                        <li><a href="#">Tramite Docuementario</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Servicios <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a
+                                                href="https://elibro.net/es/lc/andabamba/login_usuario/?next=/es/lc/andabamba/inicio/">Biblioteca
+                                                Virtual</a></li>
+                                        <li><a href="https://institutoandabamba.site/login/index.php" targ>Campus
+                                                Virtual</a></li>
+                                        <li><a href="servicioscomplementarios.html">Servicio Complemantario</a></li>
+                                        <li><a href="#">Bolsa Laboral</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Otros <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Link Institucionales</a></li>
+                                        <li><a href="contacto.html">Contacto</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="content_wrapper">
+        <div class="breadcrumb_wrap" data-stellar-background-ratio="0.3"
+            style="background: url(images/slider_graduate.jpg); background-attachment: fixed; background-position: 50% 50%;">
+            <div class="breadcrumb_wrap_inner">
+                <div class="container">
+                    <h1>Quienes Somos</h1>
+                    <ul class="breadcrumbs">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="tab-container2">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openTab(event, 'Nosotros')">Acerca de Nosotros</button>
+                    <button class="tablinks" onclick="openTab(event, 'MyV')">Misión y Visión</button>
+                    <button class="tablinks" onclick="openTab(event, 'Valores')">Nuestros Valores</button>
+                    <button class="tablinks" onclick="openTab(event, 'Cronologia')">Cronología</button>
+                </div>
+        
+                <div id="Nosotros" class="tabcontent active">
+                    <h1 class="title-with-icon">
+                        <span class="icon">»</span>IESTP ANDABAMBA
+                    </h1>
+                    <br>
+                    <p>El Instituto de Educación Superior Tecnológico Público “ANDABAMBA” es creado por Resolución Ministerial
+                        Nº 0226 – 2005 – ED del 08 de abril del 2005; siendo presidente de la República del Perú el Doctor
+                        Alejandro Celestino Toledo Manrique y Ministro de Educación el doctor Javier Sota Nadal; gracias a la
+                        gestión municipal del alcalde distrital en ese momento, el Sr. Luis Ángel Herrera Jara.
+        
+                        El inicio de funciones se realizó el 15 de abril del 2005. Actualmente oferta la carrera técnica
+                        profesional de Computación e Informática, la cual a partir del año 2017 pasará a llamarse
+                        “Arquitectura de Plataformas y Servicios de Tecnologías de la Información”.
+                    </p>
+                </div>
+        
+                <div id="MyV" class="tabcontent">
+                    <h1 class="title-with-icon">
+                        <span class="icon">»</span>Misión
+                    </h1>
+                    <br>
+                    <p>Somos una institución formadora de profesionales técnicos, que busca el bienestar de la comunidad,
+                        formando líderes competentes, investigadores e innovadores, promotores del desarrollo, creativos y
+                        críticos, practicando una gestión democrática participativa, para garantizar una educación íntegra y
+                        de calidad.
+                    </p>
+        
+                    <h1 class="title-with-icon">
+                        <span class="icon">»</span>Visión
+                    </h1>
+                    <br>
+                    <p>Ser un IESTP ANDABAMBA líder al 2029, formando profesionales técnicos altamente competentes,
+                        emprendedores, que logren su realización ética en la investigación e innovación disruptiva, que
+                        contribuyan al desarrollo y sostenibilidad de su comunidad, región y el país.
+                    </p>
+                </div>
+        
+                <div id="Valores" class="tabcontent">
+                    <h1 class="title-with-icon">
+                        <span class="icon">»</span>Nuestros Valores
+                    </h1>
+                    <br>
+                    <b>Responsabilidad:</b>
+                    <p>El personal Directivo, Docente, Administrativo y alumnado de nuestra Institución realizan sus labores
+                        con gran dedicación, eficiencia y compromiso en su entorno laboral, logrando resultados exitosos
+                        para la institución.
+                    </p>
+                    <b>Honestidad:</b>
+                    <p>Asumimos este valor con una dosis de valentía y una clara voluntad por mantener la coherencia de
+                        nuestros actos, lo cual nos lleva a sembrar la confianza en uno mismo y a ganarnos la de los demás.
+                    </p>
+                    <b>Democracia:</b>
+                    <p>Nuestra convivencia como institución de educación superior, son características y cualidades que
+                        dirigen a nuestra institución para lograr que el proceso democrático se consolide y sea exitoso.
+                    </p>
+                    <b>Solidaridad:</b>
+                    <p>La comunidad educativa se compromete por el beneficio de los demás, convirtiendo una actitud generosa
+                        en una virtud contribuyendo a las necesidades de los otros como si fueran propias.
+                    </p>
+                    <b>Ética:</b>
+                    <p>Practicamos la moral, la virtud, el deber, y la felicidad y el buen vivir, actuando con toda libertad
+                        según las enseñanzas morales y éticas.
+                    </p>
+                    <b>Identidad:</b>
+                    <p>Compromiso de la comunidad educativa, en cada uno de sus actos dentro y fuera de la institución.
+                    </p>
+                    <b>Proactividad:</b>
+                    <p>Actitud que asumen los integrantes de la institución para superar diversas circunstancias, no solo
+                        laborales sino también de la vida personal de cada uno.
+                    </p>
+                    <b>Conciencia ambiental:</b>
+                    <p>Compromiso institucional por la conservación.
+                    </p>
+                </div>
+        
+                <div id="Cronologia" class="tabcontent">
+                    <h1 class="title-with-icon">
+                        <span class="icon">»</span>Gestiones Municipales de Turno
+                    </h1>
+                    <br>
+                    <div class="authorities-grid">
+                        <div class="authority-item">
+                            <img src="images/luisAngel20052006.png" alt="Autoridad 1">
+                            <p>Luis Ángel Herrera Jara</p>
+                            <b>2005–2006</b>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/joseclodomiro.png" alt="Autoridad 2">
+                            <p>José Clodomiro Rojas Tarrillo</p>
+                            <b>2007–2010</b>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/guillermo.png" alt="Autoridad 3">
+                            <p>Guillermo Mera Flores</p>
+                            <b>2011–2014</b>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/joseclodomiro.png" alt="Autoridad 4">
+                            <p>José Clodomiro Rojas Tarrillo</p>
+                            <b>2015–2018</b>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/saturnino.jpg" alt="Autoridad 5">
+                            <p>Saturnino Vásquez Ramos</p>
+                            <b>2019–2022</b>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/joel.png" alt="Autoridad 6">
+                            <p>Mg. Joel Uriarte Vásquez</p>
+                            <b>2023-Actualidad</b>
+                        </div>
+                    </div>
+        
+                    <h1 class="title-with-icon">
+                        <span class="icon">»</span>Directores
+                    </h1>
+                    <br>
+                    <div class="authorities-grid">
+                        <div class="authority-item">
+                            <img src="images/sinfoto.jpg" alt="Autoridad 1">
+                            <p>Bach. Elva L. Albújar Núñez</p>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/marcial.jpeg" alt="Autoridad 2">
+                            <p>Lic. Marcial Vásquez Walter</p>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/David.jpeg" alt="Autoridad 3">
+                            <p>Mg. David Lobato Villena</p>
+                            <b>periodo</b>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/delfin.png" alt="Autoridad 4">
+                            <p>Prof. Segundo Delfín Torres Romerol</p>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/joel.png" alt="Autoridad 5">
+                            <p>Mg. Joel Uriarte Vásquez</p>
+                        </div>
+                        <div class="authority-item">
+                            <img src="images/elver.jpg" alt="Autoridad 6">
+                            <p>Mg. Elver Tarrillo Cotrina</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <script>
+                    function openTab(evt, tabName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                            tabcontent[i].classList.remove("active");
+                        }
+        
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+        
+                        document.getElementById(tabName).style.display = "block";
+                        document.getElementById(tabName).classList.add("active");
+                        evt.currentTarget.className += " active";
+                    }
+                </script>
+            </div>
+        <br><br><br><br>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+        <div class="row">
+        
+        <div class="footer_link_wrapper">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <ul class="footer_list">
+        <li>
+        <div class="footer_logo"><img alt="Footer Logo" src="images/andabamba1.png"></div>
+        <div class="footer_txt"><p>Formamos los mejores profesionales que necesita el mundo.</p></div>
+        <div class="footer_email"><i class="fa fa-envelope"></i> <a href="mailto:abcxyz@abc.com">iestandabamba@gmail.com</a></div>
+        <div class="footer_phone"><i class="fa fa-phone"></i> +51 951 364 328</div>
+        <div class="social_links">
+        <a href="#" target="_blank" rel="external nofollow" title="Share it"><i class="fa fa-facebook"></i></a>
+        <a href="#" target="_blank" rel="external nofollow" title="Tweet it"><i class="fa fa-twitter"></i></a>
+        <a href="#" target="_blank" rel="external nofollow" title="Linked it"><i class="fa fa-linkedin"></i></a>
+        </div>
+        </li>
+        </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <ul class="footer_list">
+        <li>
+        <h3>Latest News</h3>
+        <ul class="foot_letnews_list">
+        <li>
+        <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news1.jpg"></div>
+        <div class="foot_letnews_info">
+        <h4><a href="#">You'll hear a tale a tale of alorem epsumn dollare gupt animap</a></h4>
+        </div>
+        </li>
+        <li>
+        <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news2.jpg"></div>
+        <div class="foot_letnews_info">
+        <h4><a href="#">Here's the story of a named alorem epsumn dollare guptni</a></h4>
+        </div>
+        </li>
+        <li>
+        <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news3.jpg"></div>
+        <div class="foot_letnews_info">
+        <h4><a href="#">So get a witch's shawl on alorem epsumn dollare gupt</a></h4>
+        </div>
+        </li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+        <ul class="footer_list">
+        </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padd_rnone">
+        <div class="foot_gallery">
+        <h3>Galeria</h3>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am1_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am2_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am3_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am4_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am5_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am6_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am7_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am8_reference_size.jpg"></div>
+        <div class="col-md-4 col-xs-3"><img alt="" src="images/am9_reference_size.jpg"></div>
+        </div>
+        </div>
+        </div>
+        
+        </div>
+        </div>
+        <div class="copyright">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt">© 2024 ANDABAMBA. Todos los derechos reservados</div>
+        <div class="time_available col-lg-3 col-md-3 col-sm-6 col-xs-6"><i class="fa fa-clock-o"></i> Lunes - Viernes &nbsp;&nbsp;(8am - 1pm) &nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="social col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <ul class="pull-right">
+        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </footer>
+
+
+    <div class="offcanvas_overlay"></div>
+
+
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.dlmenu.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/js-functions.js"></script>
+</body>
+
+
+</html>

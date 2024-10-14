@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="zxx">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!--[if IE]>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+
+
+<!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+	<![endif]-->
+
+<link rel="icon" href="images/andabamba1.png" type="image/x-icon" />
+<title>Andabamba | Becas</title>
+
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="css/mob_menu.css" />
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:800,500%7CLato:400,300,400italic,700,700italic,300italic,900italic,900,100,100italic%7CRoboto:400,500,600' rel='stylesheet' type='text/css' />
+<style>
+           .header-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content-section {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .content-section p {
+            color: #333333;
+            font-size: 18px;
+            max-width: 900px;
+        }
+
+        .table-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .table-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table-section th, .table-section td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 12px;
+        }
+
+        .table-section th {
+            background-color: #00aaff;
+            color: white;
+        }
+
+        .table-section td {
+            color: #333333;
+        }
+
+        .table-section caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        /* */
+                /* Añade aquí el CSS proporcionado */
+                .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .container h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px; /* Espaciado entre letras */
+        }
+
+        .container h2:before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #333;
+            margin: 0 auto 10px auto;
+        }
+
+        .container img {
+            width: 150px; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .container img:hover {
+            transform: scale(1.1); /* Agrandar ligeramente la imagen al pasar el mouse */
+        }
+        
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            border-radius: 80px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            width: 320px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .open-modal {
+    background-color: white;
+    border: 2px solid #3498db;
+    color: #3498db;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 40px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.open-modal img {
+    vertical-align: middle;
+    margin-right: 8px; /* Menor espacio entre icono y texto */
+    width: 20px; /* Tamaño de icono ajustado */
+    height: 20px; /* Tamaño de icono ajustado */
+}
+
+.open-modal:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Estilos para las ventanas emergentes (modales) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body id="home" class="cms_blog">
+
+    <div class="header_top">
+        <div class="container">
+            <div class="top_info">
+            
+                <span class="cont_no">
+                    <i class="fa fa-phone"></i> 
+                    <a href="https://wa.me/51920857079" target="_blank">LLÁMANOS : +51 920 857 079</a>
+                </span>
+                <i class="fa fa-envelope"></i> 
+                    <a href="mailto:iestandabamba@gmail.com">iestandabamba@gmail.com</a>
+            </div>
+            <ul class="top_menu">
+                <li class="special">Lunes - Viernes &nbsp;&nbsp;(8am - 1pm) &nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container0">
+            <div class="logo">
+                <img src="images/logoandabamba.png" alt="Logo IESTP ANDABAMBA">
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa fa-phone"></i> <!-- Aquí puedes usar un ícono de Font Awesome si tienes configurado -->
+                    <span>LLÁMANOS<br>+ 51 920 857 079</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-clock"></i> <!-- Aquí puedes usar un ícono de Font Awesome si tienes configurado -->
+                    <span>HORARIO ATENCIÓN<br>Lunes a Viernes 8am - 1pm</span>
+                </div>
+            </div>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+    .header1 {
+        display: none; /* Oculta la información de contacto en móviles */
+    }
+}
+        </style>
+    </header>
+    <header>
+
+        <nav>
+            <div class="container">
+                <div id="navbar" class="navbar navbar-default">
+
+                    <div class="col-md-9 col-sm-7 col-xs-7 pull-xs-right">
+
+                        <div id="dl-menu" class="dl-menuwrapper">
+                            <button class="dl-trigger visible-sm visible-xs"><i class="fa fa-bars"></i></button>
+                            <ul class="dl-menu">
+                                <li>
+
+                                </li>
+                                <li>
+                                    <a href="index.html">Inicio</a>
+
+                                </li>
+                                <li>
+                                    <a href="#">Nosotros</a>
+                                    <ul class="dl-submenu">
+                                        <li><a href="conocenos.html">Quienes somos</a></li>
+                                        <li><a href="organizacion-institucional.html">Organizacion institucional</a></li>
+                                        <li><a href="plana-jerarquica.html">Plana Jerárquica</a></li>
+                                        <li><a href="docentes.html">Personal Docente</a></li>
+                                        <li><a href="local.html">Local</a></li>
+                                </li>
+                            </ul>
+                            </li>
+                            <li>
+                                <a href="#"> Programas de estudio</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="arquitectura.html">ARQUITECTURA</a></li>
+
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"> Admision</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="admision.html">Admision 2024</a></li>
+                                    <li><a href="#">Becas y Creditos</a></li>
+                                    <li><a href="matricula.html">Matriculas</a></li>
+                                    <li><a href="#">Calendarización</a></li>
+
+                                </ul>
+
+
+                            </li>
+
+
+
+                            <li>
+                                <a href="#"> Transparencia</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="documento-de-gestion.html">Documento de Gestion</a></li>
+                                    <li><a href="estadistica.html">Estadistica</a></li>
+                                    <li><a href="inversiones.html">Inversiones</a></li>
+                                    <li><a href="reclamaciones.html">Libro De Reclamaciones</a></li>
+                                    <li><a href="licenciamiento.html">Licenciamiento</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"> Tramite</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="tupa.html">Tupa</a></li>
+                                    <li><a href="#">Tramite Documentario</a></li>
+                                   
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"> Servicios</a>
+                                <ul class="dl-submenu">
+                                    <li><a
+                                            href="https://elibro.net/es/lc/andabamba/login_usuario/?next=/es/lc/andabamba/inicio/">Biblioteca
+                                            Virtual</a></li>
+                                    <li><a href="https://institutoandabamba.site/login/index.php" targ>Campus
+                                            Virtual</a></li>
+                                    <li><a href="#">Bolsa Laboral</a></li>
+
+                                </ul>
+
+
+                            </li>
+
+                            <li>
+                                <a href="#"> otros</a>
+                                <ul class="dl-submenu">
+                                    <li><a href="#">Link institucionales</a></li>
+                                    <li><a href="contacto.html">Contacto</a></li>
+                                </ul>
+                            </li>
+
+
+                        </div>
+                        <!--FIN DEL MENU EMERGENTE-->
+
+
+
+                        <!--Menu de la parte superior -->
+
+                        <div class="main_menu_wrap">
+                            <ul class="main_menu">
+                                <li><a class="trigger" href="index.html">inicio <i class=""></i></a>
+                                </li>
+                                <li><a class="trigger" href="#">NOSOTROS <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="conocenos.html">Quienes somos</a></li>
+                                        <li><a href="organizacion-institucional.html">Organizacion institucional</a></li>
+                                        <li><a href="plana-jerarquica.html">Plana Jerárquica</a></li>
+                                        <li><a href="docentes.html">Personal Docente</a></li>
+                                        <li><a href="local.html">Local</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">PROGRAMA DE ESTUDIO <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="arquitectura.html">ARQUITECTURA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Admision <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="admision.html">Admision 2024</a></li>
+                                        <li><a href="#">Becas y Creditos</a></li>
+                                        <li><a href="matricula.html">Matriculas</a></li>
+                                        <li><a href="#">Calendarización</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">TRASNSPARENCIA <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="documento-de-gestion.html">Documento de Gestion</a></li>
+                                        <li><a href="estadistica.html">Estadistica</a></li>
+                                        <li><a href="inversiones.html">Inversiones</a></li>
+                                        <li><a href="reclamaciones.html">Libro De Reclamaciones</a></li>
+                                        <li><a href="licenciamiento.html">Licenciamiento</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Tramite <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="tupa.html">Tupa</a></li>
+                                        <li><a href="#">Tramite Documentario</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Servicios <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a
+                                                href="https://elibro.net/es/lc/andabamba/login_usuario/?next=/es/lc/andabamba/inicio/">Biblioteca
+                                                Virtual</a></li>
+                                        <li><a href="https://institutoandabamba.site/login/index.php" targ>Campus
+                                                Virtual</a></li>
+                                        <li><a href="servicioscomplementarios.html">Servicio Complementario</a></li>
+                                        <li><a href="#">Bolsa Laboral</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="trigger" href="#">Otros <i class="fa fa-angle-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Link Institucionales</a></li>
+                                        <li><a href="contacto.html">Contacto</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<div class="content_wrapper">
+    <div class="header-section">
+        Becas y créditos.
+    </div>
+
+    <div class="content-section">
+        <img src="images/andabamba1.png" alt="Diploma">
+        <p>
+            Valoramos tu esfuerzo académico, es por ello que otorgamos becas educativas para todos aquellos estudiantes sobresalientes.
+            Se otorga beca a los estudiantes que ocupen el primer puesto según el ranking de notas; esta beca aplica a partir del segundo semestre al sexto semestre en los tres Programas de Estudios.
+            La beca brinda al estudiante un descuento del 100% y 50% en el costo de matrícula para el siguiente semestre académico.
+        </p>
+    </div>
+
+    <div class="table-section">
+        <caption>En el proceso de admisión se otorga un número de Vacantes Exonerados según los siguientes criterios</caption>
+        <table>
+            <thead>
+                <tr>
+                    <th>PROGRAMA DE ESTUDIOS</th>
+                    <th>CONVENIOS</th>
+                    <th>SERVICIO MILITAR</th>
+                    <th>EXON. PRIMEROS PUESTOS</th>
+                    <th>DISCAP.</th>
+                    <th>DEPORTISTAS CALIFICADOS</th>
+                    <th>NIVELACIÓN ACADÉMICA</th>
+                    <th>TITULADOS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Enfermería Técnica</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo Pesquero y Acuícola</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Arquitectura de Plataformas y Servicios de Tecnologías de Información</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total General</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>30</td>
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+    </div>
+    <div class="container">
+        <h2>INFORMACION DE BECAS PARA ESTUDIANTES</h2>
+        <button class="open-modal" data-modal="modal1">
+            <img src="images/valores.png" alt="Icono"> TERMINOS DE REFERENCIA
+        </button>
+    
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" data-modal="modal1">&times;</span>
+                <iframe src="C:\Users\Bruno\Downloads\OFICIO-00788-2022-MINEDU-VMGP-DIGESUTPA-DISERTPA-_ENFERMERIA-TEC.pdf" width="100%" height="600px"></iframe>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+    <div class="row">
+    
+    <div class="footer_link_wrapper">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <ul class="footer_list">
+    <li>
+    <div class="footer_logo"><img alt="Footer Logo" src="images/andabamba1.png"></div>
+    <div class="footer_txt"><p>Formamos los mejores profesionales que necesita el mundo.</p></div>
+    <div class="footer_email"><i class="fa fa-envelope"></i> <a href="mailto:abcxyz@abc.com">iestandabamba@gmail.com</a></div>
+    <div class="footer_phone"><i class="fa fa-phone"></i> +51 951 364 328</div>
+    <div class="social_links">
+    <a href="#" target="_blank" rel="external nofollow" title="Share it"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" rel="external nofollow" title="Tweet it"><i class="fa fa-twitter"></i></a>
+    <a href="#" target="_blank" rel="external nofollow" title="Linked it"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </li>
+    </ul>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <ul class="footer_list">
+    <li>
+    <h3>Latest News</h3>
+    <ul class="foot_letnews_list">
+    <li>
+    <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news1.jpg"></div>
+    <div class="foot_letnews_info">
+    <h4><a href="#">You'll hear a tale a tale of alorem epsumn dollare gupt animap</a></h4>
+    </div>
+    </li>
+    <li>
+    <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news2.jpg"></div>
+    <div class="foot_letnews_info">
+    <h4><a href="#">Here's the story of a named alorem epsumn dollare guptni</a></h4>
+    </div>
+    </li>
+    <li>
+    <div class="foot_letnews_img"><img alt="" src="images/foot_latest_news3.jpg"></div>
+    <div class="foot_letnews_info">
+    <h4><a href="#">So get a witch's shawl on alorem epsumn dollare gupt</a></h4>
+    </div>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+    <ul class="footer_list">
+    </ul>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padd_rnone">
+    <div class="foot_gallery">
+    <h3>Galeria</h3>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am1_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am2_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am3_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am4_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am5_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am6_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am7_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am8_reference_size.jpg"></div>
+    <div class="col-md-4 col-xs-3"><img alt="" src="images/am9_reference_size.jpg"></div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    <div class="copyright">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 coppyright_txt">© 2024 ANDABAMBA. Todos los derechos reservados</div>
+    <div class="time_available col-lg-3 col-md-3 col-sm-6 col-xs-6"><i class="fa fa-clock-o"></i> Lunes - Viernes &nbsp;&nbsp;(8am - 1pm) &nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div class="social col-lg-3 col-md-3 col-sm-6 col-xs-6">
+    <ul class="pull-right">
+    <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
+
+<div class="offcanvas_overlay"></div>
+<script>
+    // Obtén todos los botones de abrir modal
+var openModalButtons = document.querySelectorAll('.open-modal');
+
+// Añade evento click a cada botón
+openModalButtons.forEach(function(button) {
+button.addEventListener('click', function() {
+    var modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = "block";
+});
+});
+
+// Obtén todos los elementos para cerrar modal
+var closeModalButtons = document.querySelectorAll('.close');
+
+// Añade evento click a cada botón de cerrar
+closeModalButtons.forEach(function(span) {
+span.addEventListener('click', function() {
+    var modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = "none";
+});
+});
+
+// Cierra la ventana emergente si se hace click fuera de ella
+window.onclick = function(event) {
+if (event.target.classList.contains('modal')) {
+    event.target.style.display = "none";
+}
+}
+
+</script>
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.dlmenu.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/jquery-plugin-collection.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/js-functions.js"></script>
+</body>
+
+
+</html>
